@@ -85,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Initial animation
     anime({
         targets: '#creative-connections path',
         strokeDashoffset: [anime.setDashoffset, 0],
