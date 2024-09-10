@@ -1,66 +1,57 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #4a0e1c; /* Pinkish-black color */
-    max-width: 800px;
-    margin: 0 auto;
+    color: #4a0e1c;
+    margin: 0;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    position: relative;
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
 }
 
-h1 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    font-size: 24px;
-    color: #4a0e1c; /* Pinkish-black color */
+.logo {
+    width: 50px; 
+    height: auto;
+    align-self: flex-start;
 }
 
-section, footer {
-    margin-bottom: 40px;
-}
-
-h2 {
-    color: #4a0e1c; /* Pinkish-black color */
-}
-
-ul {
+nav ul {
     list-style-type: none;
     padding: 0;
+    text-align: right;
 }
 
-li {
+nav ul li {
     margin-bottom: 10px;
 }
 
-.numbers span {
-    display: inline-block;
-    margin-right: 20px;
-    font-size: 24px;
-    font-weight: bold;
+nav ul li a {
+    text-decoration: none;
+    color: #4a0e1c;
 }
 
-.contact-icons {
+main {
+    flex-grow: 1;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    align-items: center;
 }
 
-.icon {
-    width: 30px;
-    height: 30px;
-    background-color: #007bff;
-    display: inline-block;
+#hero {
+    max-width: 600px;
 }
 
-.cloud-icon, .team-icons {
-    width: 50px;
-    height: 50px;
-    background-color: #007bff;
-    margin-top: 10px;
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 24px;
 }
