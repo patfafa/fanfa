@@ -16,7 +16,7 @@ header {
 }
 
 .logo {
-    width: 80px; /* Adjust this value to match your logo size */
+    width: 80px; 
     height: auto;
 }
 
@@ -47,13 +47,13 @@ nav ul li a {
 main {
     flex-grow: 1;
     display: flex;
-    justify-content: flex-start; /* Align to the left */
+    justify-content: flex-start; 
     align-items: center;
-    padding-left: 20px; /* Add some padding to the left */
+    padding-left: 20px; 
 }
 
 #hero {
-    text-align: left; /* Align text to the left */
+    text-align: left; 
 }
 
 h1 {
@@ -66,16 +66,33 @@ p {
     font-size: 36px;
 }
 
-/* Mobile optimization */
 @media (max-width: 768px) {
     body {
         padding: 15px;
-        font-size: 16px;
     }
 
     header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 15px;
     }
 
     main {
@@ -84,7 +101,6 @@ p {
     }
 
     #hero {
-        max-width: 100%;
         text-align: center;
     }
 
@@ -94,6 +110,13 @@ p {
 
     p {
         font-size: 24px;
+    }
+
+    .nav-text {
+        position: static;
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
     }
 }
 
@@ -132,7 +155,7 @@ p {
     animation: fadeInUp 0.3s ease forwards;
 }
 
-/* Mobile optimization */
+
 @media (max-width: 768px) {
     nav ul {
         text-align: center;

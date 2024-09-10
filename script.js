@@ -9,18 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
             i++;
             setTimeout(typeWriter, 100);
         } else {
-            // Reset and start over after a delay
             setTimeout(() => {
                 typewriterElement.innerHTML = '';
                 i = 0;
                 typeWriter();
-            }, 2000); // Wait 2 seconds before restarting
+            }, 2000); 
         }
     }
 
     typeWriter();
 
-    // Style text toggle functionality with animation
     const styleLink = document.getElementById('styleLink');
     const styleText = document.getElementById('styleText');
 
@@ -29,14 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
         styleText.classList.toggle('active');
     });
 
-    // Close the text when clicking outside
     document.addEventListener('click', (e) => {
         if (!styleText.contains(e.target) && e.target !== styleLink) {
             styleText.classList.remove('active');
         }
     });
 
-    // Add smooth scrolling to all links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -45,6 +41,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-
-    // You can add more interactivity here as needed
 });
