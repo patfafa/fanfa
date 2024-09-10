@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const paths = document.querySelectorAll('path');
-
-    anime({
-        targets: paths,
-        strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeInOutSine',
-        duration: 1500,
-        delay: (el, i) => i * 250,
-        direction: 'alternate',
-        loop: true
+    // Add smooth scrolling to all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
+
+    // You can add more interactivity here as needed
 });
