@@ -7,27 +7,49 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="fanfa-logo.png" alt="FA&FA Logo" class="logo">
-        <nav>
-            <ul>
-                <li>
-                    <a href="#" id="styleLink">Style</a>
-                    <div id="styleText" class="nav-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </li>
-                <li><a href="#strategy">Strategy</a></li>
-                <li><a href="#spectacles">Spectacles</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="hero">
-            <h1 id="typewriter"></h1>
-            <p>high agency agency</p>
-        </section>
-    </main>
+    <div id="loading-screen">
+        <div id="loading-bar"></div>
+    </div>
+    <div id="content">
+        <div class="text-line">FA&FA AGENCY</div>
+        <div class="text-line">GENUINE FAKES</div>
+        <div class="text-line">2024 — SELECTED UNIVERSES</div>
+        <div class="nav">
+            <span class="nav-item" id="style-button">STYLE</span>
+            <span class="nav-item" id="strategy-button">STRATEGY</span>
+            <span class="nav-item" id="spectacle-button">SPECTACLE</span>
+        </div>
+    </div>
+    <div id="style-page" class="overlay-page">
+        <div class="page-content">
+            <div class="page-title">(STYLE)</div>
+            <div class="page-text">
+                INDEPENDENT MYTHOS AGENCY<br>
+                CRAFTING ALTERNATE REALITIES FOR<br>
+                GLOBAL BRANDS WORLDWIDE
+            </div>
+        </div>
+        <div class="close-button">CLOSE</div>
+    </div>
+    <div id="strategy-page" class="overlay-page">
+        <div class="page-content">
+            <div class="page-title">(STRATEGY)</div>
+            <div class="page-text">
+                LOREM IPSUM DOLOR SIT AMET
+            </div>
+        </div>
+        <div class="close-button">CLOSE</div>
+    </div>
+    <div id="spectacle-page" class="overlay-page">
+      <div class="page-content">
+          <div class="page-title">(SPECTACLE)</div>
+          <div class="page-text">
+              LOREM IPSUM DOLOR SIT AMET
+          </div>
+      </div>
+      <div class="close-button">CLOSE</div>
+  </div>
+    <div id="cursor"></div>
     <script src="script.js"></script>
 </body>
 </html>
