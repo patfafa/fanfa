@@ -9,9 +9,124 @@ body, html {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    cursor: none;
-    font-size: 18px; 
-    font-weight: bold; 
+    cursor: default;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+#content {
+    text-align: center;
+    padding: 20px;
+    opacity: 0; 
+}
+
+#content > * {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#content.animate > * {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+#content.animate .text-line:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+#content.animate .text-line:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+#content.animate .text-line:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+#content.animate .nav {
+    animation-delay: 0.8s;
+}
+
+.text-line {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+}
+
+.nav {
+    font-size: 1.2em;
+    margin-top: 2em;
+}
+
+.nav-item {
+    margin: 0 0.5em;
+    cursor: pointer;
+}
+
+.overlay-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FCFCFC;
+    color: #232323;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.page-content {
+    max-width: 80%;
+    padding: 40px 20px;
+}
+
+.page-title {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.page-text {
+    font-size: 1.5em;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    body, html {
+        font-size: 18px;
+    }
+
+    .text-line {
+        font-size: 2em;
+    }
+
+    .nav {
+        font-size: 1em;
+    }
+
+    .page-content {
+        max-width: 90%;
+        padding: 30px 15px;
+    }
+
+    .page-title {
+        font-size: 2em;
+    }
+
+    .page-text {
+        font-size: 1.2em;
+    }
+}
+
+.text-line, .nav-item, .close-button {
+    cursor: pointer;
 }
 
 #loading-screen {
@@ -24,175 +139,48 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 2000;
 }
 
-#loading-bar {
-    width: 0;
-    height: 2px;
-    background-color: #232323;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    transition: width 0.5s ease;
-}
-
-#counter {
-    font-size: 48px;
-    font-weight: bold;
-    color: #FCFCFC;
-    text-shadow: 0 0 10px #FCFCFC;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
-
-#content {
-    text-align: center; 
-    width: 100%;
-    max-width: 800px;
-    display: none;
-}
-
-.text-line {
-    font-size: 2.5em; 
-    margin: 20px 0;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-    margin-bottom: 0.5em; 
-}
-
-.text-line:hover {
-    color: #a0a0a0;
-}
-
-.logo {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: #FCFCFC;
-    margin-left: 10px;
-    transition: transform 0.3s ease;
-}
-
-.logo:hover {
-    transform: rotate(45deg);
-}
-
-.nav {
-    margin-top: 40px;
-    font-size: 1.5em;
-    margin-top: 2em; 
-}
-
-.nav-item {
-    display: inline-block;
-    margin: 0 20px;
-    transition: all 0.3s ease;
-    cursor: none;
-    margin: 0 1em; 
-}
-
-.nav-item:hover {
-    color: #a0a0a0;
-}
-
-#cursor {
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-}
-
-#cursor::before {
-    content: '★';
-    font-size: 20px;
-    color: #232323;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.cursor-hover {
-    width: 30px;
-    height: 30px;
-}
-
-.cursor-hover::before {
-    font-size: 30px;
-}
-
-.overlay-page {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(35, 35, 35, 0.9); 
-    z-index: 1000; 
+#loading-animation {
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FCFCFC; 
-    color: #232323; 
 }
 
-.overlay-page.active {
-    display: flex;
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: #232323;
+    border-radius: 50%;
+    margin: 0 10px;
+    animation: bounce 0.5s ease-in-out infinite alternate;
 }
 
-.page-content {
-    text-align: center;
+.circle:nth-child(2) {
+    animation-delay: 0.1s;
 }
 
-.page-title {
-    font-size: 3em; 
-    margin-bottom: 40px;
-    color: #666;
+.circle:nth-child(3) {
+    animation-delay: 0.2s;
 }
 
-.page-text {
-    font-size: 1.5em; 
-    line-height: 1.5;
-}
-
-.close-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.2em; 
-    cursor: none;
-    color: #232323; 
-}
-
-@media (max-width: 768px) {
-    .text-line, .page-text {
-        font-size: 24px;
+@keyframes bounce {
+    from {
+        transform: translateY(0);
     }
-    .page-title {
-        font-size: 36px;
+    to {
+        transform: translateY(-20px);
     }
 }
 
-@media (max-width: 480px) {
-    .text-line, .page-text {
-        font-size: 20px;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    .page-title {
-        font-size: 30px;
-    }
-    .nav-item {
-        display: block;
-        margin: 10px 0;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

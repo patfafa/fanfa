@@ -8,47 +8,56 @@
 </head>
 <body>
     <div id="loading-screen">
-        <div id="loading-bar"></div>
+        <div id="loading-animation">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
     </div>
     <div id="content">
-        <div class="text-line">FA&FA AGENCY</div>
-        <div class="text-line">GENUINE FAKES</div>
-        <div class="text-line">2024 — SELECTED UNIVERSES</div>
+        <div class="text-line" id="agency-button">FA&FA AGENCY</div>
+        <div class="text-line" id="fakes-button">GENUINE FAKES</div>
+        <div class="text-line" id="universes-button">2024 — SELECTED UNIVERSES</div>
         <div class="nav">
-            <span class="nav-item" id="style-button">STYLE</span>
-            <span class="nav-item" id="strategy-button">STRATEGY</span>
-            <span class="nav-item" id="spectacle-button">SPECTACLE</span>
+            <span class="nav-item" id="case-study-button">CASE STUDY</span>
+            <span class="nav-item" id="contact-button">CONTACT</span>
         </div>
     </div>
-    <div id="style-page" class="overlay-page">
+    <div id="agency-page" class="overlay-page">
+        <div class="close-button">×</div>
         <div class="page-content">
             <div class="page-title">(STYLE)</div>
-            <div class="page-text">
-                INDEPENDENT MYTHOS AGENCY<br>
-                CRAFTING ALTERNATE REALITIES FOR<br>
-                GLOBAL BRANDS WORLDWIDE
-            </div>
+            <div class="page-text">INDEPENDENT MYTHOS AGENCY, CRAFTING ALTERNATE REALITIES FOR GLOBAL BRANDS WORLDWIDE.</div>
         </div>
-        <div class="close-button">CLOSE</div>
     </div>
-    <div id="strategy-page" class="overlay-page">
+    <div id="fakes-page" class="overlay-page">
+        <div class="close-button">×</div>
         <div class="page-content">
             <div class="page-title">(STRATEGY)</div>
-            <div class="page-text">
-                LOREM IPSUM DOLOR SIT AMET
-            </div>
+            <div class="page-text">WE DESIGN VIRAL CONTENTS BASED ON YOUR BRAND ALTERNATIVE UNIVERSES.</div>
         </div>
-        <div class="close-button">CLOSE</div>
     </div>
-    <div id="spectacle-page" class="overlay-page">
-      <div class="page-content">
-          <div class="page-title">(SPECTACLE)</div>
-          <div class="page-text">
-              LOREM IPSUM DOLOR SIT AMET
-          </div>
-      </div>
-      <div class="close-button">CLOSE</div>
-  </div>
+    <div id="universes-page" class="overlay-page">
+        <div class="close-button">×</div>
+        <div class="page-content">
+            <div class="page-title">(SPECTACLE))</div>
+            <div class="page-text">BT, MK GREEN, TOCALTV, SCHMUCKS, THE NEW MYTH, BERGKITA, RULEBREAKERS ENGLISH STUDIO, UOMO, ITS. </div>
+        </div>
+    </div>
+    <div id="case-study-page" class="overlay-page">
+        <div class="close-button">×</div>
+        <div class="page-content">
+            <div class="page-title">CASE STUDY</div>
+            <div class="page-text">LOREM IPSUM DOLOR SIT AMET</div>
+        </div>
+    </div>
+    <div id="contact-page" class="overlay-page">
+        <div class="close-button">×</div>
+        <div class="page-content">
+            <div class="page-title">CONTACT</div>
+            <div class="page-text">BB@FAFA.AGENCY</div>
+        </div>
+    </div>
     <div id="cursor"></div>
     <script src="script.js"></script>
 </body>
