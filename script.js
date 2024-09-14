@@ -12,13 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 3000); // 3 seconds loading time, adjust as needed
 
     // Add click event listeners for links
-    document.getElementById('past-work').addEventListener('click', function(e) {
+    document.getElementById('our-work').addEventListener('click', function(e) {
         e.preventDefault();
-        alert('Past work section is coming soon!');
+        alert('Our work section is coming soon!');
     });
 
     document.getElementById('contact').addEventListener('click', function(e) {
         e.preventDefault();
         alert('Contact form is coming soon!');
     });
+
+
 });
