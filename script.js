@@ -4,8 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Simulate loading time
     setTimeout(() => {
-        loadingScreen.style.display = 'none';
-        content.style.opacity = '1';
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+            content.style.opacity = '1';
+        }, 500);
     }, 3000); // 3 seconds loading time, adjust as needed
 
     // Add click event listeners for links
