@@ -2,37 +2,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const loadingScreen = document.getElementById('loading-screen');
     const content = document.getElementById('content');
 
-    const buttons = {
-        'agency-button': 'agency-page',
-        'fakes-button': 'fakes-page',
-        'universes-button': 'universes-page',
-        'case-study-button': 'case-study-page',
-        'contact-button': 'contact-page'
-    };
-
-    const closeButtons = document.querySelectorAll('.close-button');
-    const overlayPages = document.querySelectorAll('.overlay-page');
-
+    // Simulate loading time
     setTimeout(() => {
         loadingScreen.style.display = 'none';
         content.style.opacity = '1';
-        content.classList.add('animate');
-    }, 2500); 
+    }, 3000); // 3 seconds loading time, adjust as needed
 
-    for (const [buttonId, pageId] of Object.entries(buttons)) {
-        const button = document.getElementById(buttonId);
-        const page = document.getElementById(pageId);
-        
-        button.addEventListener('click', () => {
-            page.style.display = 'flex';
-        });
-    }
+    // Add click event listeners for links
+    document.getElementById('past-work').addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Past work section is coming soon!');
+    });
 
-    closeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            overlayPages.forEach(page => {
-                page.style.display = 'none';
-            });
-        });
+    document.getElementById('contact').addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Contact form is coming soon!');
     });
 });
